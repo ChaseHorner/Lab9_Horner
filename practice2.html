@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <h1>Practice 2</h1>
+</head>
+<body>
+  <div id="dummy"> Dummy text<br><br></div>
+  <p>Paragraph Fill Color:</p>
+  Red (0-255) <input type="text" id="pred"> <br>
+  Green (0-255) <input type="text" id="pgreen"> <br>
+  Blue (0-255) <input type="text" id="pblue"> <br><br>
+  <p>Border Color:</p>
+  Red (0-255) <input type="text" id="bred"> <br>
+  Green (0-255) <input type="text" id="bgreen"> <br>
+  Blue (0-255) <input type="text" id="bblue"> <br><br>
+  <p>Border Width:</p>
+  <input type="text" id="bwidth"> <br><br>
+  <button onclick="changeColor()">Change Color</button>
+
+  <script>
+    document.getElementById("dummy").style.borderStyle="solid";
+
+    function changeColor(){
+      var pred = document.getElementById("pred").value;
+      var pgreen = document.getElementById("pgreen").value;
+      var pblue = document.getElementById("pblue").value;
+      var bred = document.getElementById("bred").value;
+      var bgreen = document.getElementById("bgreen").value;
+      var bblue = document.getElementById("bblue").value;
+      var bwidth = document.getElementById("bwidth").value;
+      document.getElementById("dummy").style.backgroundColor= "rgb(" + pred + ", " + pgreen + ", " + pblue + ")";
+      document.getElementById("dummy").style.borderColor= "rgb(" + bred + ", " + bgreen + ", " + bblue + ")";
+      document.getElementById("dummy").style.borderWidth=bwidth + "px";
+    }
+  </script>
+</body>
+</html>
